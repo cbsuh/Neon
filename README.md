@@ -5,6 +5,53 @@ Neon 가스는 liquid air를 fractional distillation으로 생산한다.
 참고
 * [Neon - Wikipedia](https://en.wikipedia.org/wiki/Neon)
 
+## Syntax
+
+가능하면 영어 단어를 안쓰도록 하자.
+
+### Comments
+
+* c++의 `//`과 동일
+
+### Primitive Types
+
+* signed integer
+  - #8, #16, #32, #64
+  - NaN 지원: overflow, divide by zero
+
+* floating point
+  - #.16, #.32, #.64
+
+* complex (?)
+  - #i64, #i128
+
+### Array
+
+```
+arr [#32 10]
+```
+
+### Class Definition
+
+```
+@ MyObject
+    attr1 #32
+    attr2 #64
+
+    @ method(param #32) #32
+        : param + attr1
+```
+
+### Function Definition
+
+```
+@ fibo(x #64) #64
+    :
+        fibo(x - 1) + fibo(x - 2)
+    x < 3:
+        1
+```
+
 ## 다른 언어 조사
 
 ### Go
