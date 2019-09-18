@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-clang++-8 -g source/neon.cpp `/usr/lib/llvm-8/bin/llvm-config --cxxflags --ldflags --system-libs --libs core mcjit native` -O3 -o out/neon
