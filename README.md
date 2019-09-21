@@ -1,4 +1,13 @@
-# Neon Distillation
+# Neon
+
+Core features of Neon language are:
+
+* function is a kind of table which maps input to output
+* support object but immutable - just to represent complex data type
+* natural language neutral - anybody can use only his/her mother tongue
+    + to enable this, there is no English reserved word. only symbols
+
+## Neon Distillation
 Neon 가스는 liquid air를 fractional distillation으로 생산한다.
 이 project에서는 Neon language의 syntax를 실험한다.
 
@@ -12,6 +21,14 @@ Neon 가스는 liquid air를 fractional distillation으로 생산한다.
 ### Comments
 
 * c++의 `//`과 동일
+
+### Source Code Encoding
+
+* recommend: UTF-8 without BOM
+* optional: UTF-8 with BOM
+* all names should allow unicode characters
+  + see beauty in swift code for mathematics
+    > [github: Euler](https://github.com/mattt/Euler)
 
 ### Primitive Types
 
