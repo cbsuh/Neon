@@ -89,6 +89,23 @@ arr [#32 10]
 * class밖에 method를 선언해서, 확장이 쉬움
   - receiver는 함수의 첫번째 parameter임
 
+#### 빠른 Compile 속도를 위해서
+
+Go가 compile 속도가 빠른 것으로 유명해서 go의 경우를 조사해보니:
+
+- Dependency analysis가 쉽고, C-style include의 부하가 없기 때문
+
+    - [StackOverflow: How does Go compile so quickly?](https://stackoverflow.com/questions/2976630/how-does-go-compile-so-quickly)
+
+- [Understanding Dependency Management in Go](https://lucasfcosta.com/2017/02/07/Understanding-Go-Dependency-Management.html)
+
+    - namespace를 실제 path와 일치시켰음.
+    - github.com/author/pkgname 처럼 되어 있어서 download 가능.
+    - version에 대한 정보가 없는 문제.
+
+        - vendor folder로 해결했는데, 마음에 들지 않음.
+        - git의 tag에 version이 저장되고, 이것을 이요하는 것이 좋을 듯. 단, 이 경우에 package의 어떤 version에 binding되어 있는지 별도의 정보가 있어야 함. (node.js가 그런 식이었나?)
+        
 ```
 newline        = /* the Unicode code point U+000A */ .
 unicode_char   = /* an arbitrary Unicode code point except newline */ .
