@@ -76,6 +76,12 @@ arr [#32 10]
         1
 ```
 
+## 기타
+
+functional language에서는 service를 위해서, Redis같은 외부 DB가 있는 것이 좋은가?
+
+* 내부에 별도의 thread로 storage를 유지하는 것보다 나은가?
+
 ## 다른 언어 조사
 
 ### Go
