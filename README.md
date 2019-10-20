@@ -18,6 +18,13 @@ Neon 가스는 liquid air를 fractional distillation으로 생산한다.
 
 가능하면 영어 단어를 안쓰도록 하자.
 
+* 모든 object는 read only
+* 모든 object는 reference count됨
+* object의 property로 다른 object의 reference를 가질 수 있음
+  * 당연히 reference count를 증가 시키고.
+
+위의 세 조건이면 old object와 일부만 변경된 new object를 최소한의 memory와 construction time으로 유지할 수 있음.
+
 ### Comments
 
 * c++의 `//`과 동일
